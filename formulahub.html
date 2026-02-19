@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FormulaHub – All CBSE Class 6–12 Formula Sheets for Maths, Physics & Chemistry in one place. Free PDF downloads, chapter-wise formulas, JEE Special section.">
+<meta name="keywords" content="CBSE formulas, class 10 maths formulas, physics formulas, chemistry formulas, JEE formulas, formula sheet PDF">
+<title>FormulaHub – All Class Formula Sheets in One Place</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ========== CSS VARIABLES ========== */
+:root {
+  --bg: #f4f7ff;
+  --bg2: #edf2ff;
+  --surface: #ffffff;
+  --surface2: #f0f4ff;
+  --border: #d8e2ff;
+  --text: #0a0f2e;
+  --text2: #3a4170;
+  --text3: #7a82a8;
+  --accent: #2563eb;
+  --accent2: #1e40af;
+  --accent3: #3b82f6;
+  --gold: #f59e0b;
+  --green: #10b981;
+  --red: #ef4444;
+  --purple: #7c3aed;
+  --shadow: 0 4px 24px rgba(37,99,235,0.10);
+  --shadow-lg: 0 12px 48px rgba(37,99,235,0.15);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+[data-theme="dark"] {
+  --bg: #060d1f;
+  --bg2: #0c1530;
+  --surface: #111827;
+  --surface2: #1a2540;
+  --border: #1e3a6e;
+  --text: #e8eeff;
+  --text2: #94a3c4;
+  --text3: #4a5578;
+  --accent: #3b82f6;
+  --accent2: #2563eb;
+  --accent3: #60a5fa;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,0.5);
+}
+
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s, color 0.4s;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 99px; }
+
+/* ========== NAVBAR ========== */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 0 24px;
+  height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(244,247,255,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+[data-theme="dark"] .navbar {
+  background: rgba(6,13,31,0.85);
+}
+.nav-brand {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 1.35rem; font-weight: 800; color: var(--text);
+  letter-spacing: -0.5px;
+}
+.nav-brand .logo-icon {
+  width: 36px; height: 36px;
+  background: var(--accent);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1rem; font-weight: 900;
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+}
+.nav-brand span { color: var(--accent); }
+
+.nav-links {
+  display: flex; align-items: center; gap: 4px;
+}
+.nav-links a {
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem; font-weight: 500; color: var(--text2);
+  transition: var(--transition);
+}
+.nav-links a:hover, .nav-links a.active {
+  background: var(--surface2); color: var(--accent);
+}
+
+.nav-right {
+  display: flex; align-items: center; gap: 10px;
+}
+
+.search-btn {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text2); font-size: 1rem;
+  transition: var(--transition);
+}
+.search-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.dark-toggle {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text2); font-size: 1rem;
+  transition: var(--transition);
+}
+.dark-toggle:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--border);
+  align-items: center; justify-content: center;
+}
+.hamburger span {
+  display: block; width: 18px; height: 2px;
+  background: var(--text2); border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* ========== SEARCH OVERLAY ========== */
+.search-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(6,13,31,0.7);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: flex-start; justify-content: center;
+  padding-top: 120px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s;
+}
+.search-overlay.active { opacity: 1; pointer-events: all; }
+.search-box {
+  width: 100%; max-width: 640px; margin: 0 24px;
+  background: var(--surface);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.search-input-wrap {
+  display: flex; align-items: center; gap: 12px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.search-input-wrap svg { color: var(--text3); flex-shrink: 0; }
+.search-input-wrap input {
+  flex: 1; border: none; background: none; outline: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem; color: var(--text);
+}
+.search-input-wrap input::placeholder { color: var(--text3); }
+.search-results { padding: 12px; max-height: 360px; overflow-y: auto; }
+.search-result-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; border-radius: 10px;
+  cursor: pointer; transition: var(--transition);
+}
+.search-result-item:hover { background: var(--surface2); }
+.result-badge {
+  padding: 3px 10px; border-radius: 20px;
+  font-size: 0.72rem; font-weight: 600;
+  background: var(--bg2); color: var(--accent);
+}
+.result-title { font-size: 0.9rem; font-weight: 500; color: var(--text); }
+.result-sub { font-size: 0.8rem; color: var(--text3); }
+
+/* ========== MOBILE NAV ========== */
+.mobile-nav {
+  position: fixed; top: 68px; left: 0; right: 0; z-index: 999;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  display: none;
+  flex-direction: column; gap: 4px;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: var(--transition);
+}
+.mobile-nav.open {
+  display: flex; transform: translateY(0); opacity: 1;
+}
+.mobile-nav a {
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 500; color: var(--text2);
+  transition: var(--transition);
+}
+.mobile-nav a:hover { background: var(--surface2); color: var(--accent); }
+
+/* ========== HERO ========== */
+.hero {
+  min-height: 100vh;
+  padding: 120px 24px 80px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37,99,235,0.12) 0%, transparent 70%),
+              radial-gradient(ellipse 50% 40% at 80% 80%, rgba(124,58,237,0.07) 0%, transparent 60%);
+}
+.hero-grid {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.4;
+  mask-image: radial-gradient(ellipse 70% 50% at 50% 0%, black 40%, transparent 100%);
+}
+.hero-content { position: relative; z-index: 1; max-width: 800px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 16px;
+  border-radius: 99px;
+  background: rgba(37,99,235,0.1);
+  border: 1px solid rgba(37,99,235,0.25);
+  font-size: 0.82rem; font-weight: 600; color: var(--accent);
+  margin-bottom: 28px;
+  animation: fadeSlideDown 0.8s ease both;
+}
+.hero-badge .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.5; transform:scale(1.3); }
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  animation: fadeSlideDown 0.8s 0.1s ease both;
+}
+.hero h1 .line2 { color: var(--accent); }
+.hero p {
+  font-size: 1.15rem; color: var(--text2); max-width: 540px; margin: 0 auto 40px;
+  animation: fadeSlideDown 0.8s 0.2s ease both;
+}
+.hero-cta {
+  display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+  animation: fadeSlideDown 0.8s 0.3s ease both;
+}
+.btn-primary {
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700; font-size: 0.95rem;
+  box-shadow: 0 4px 20px rgba(37,99,235,0.35);
+  transition: var(--transition);
+  display: flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,99,235,0.45); }
+.btn-secondary {
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600; font-size: 0.95rem;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  display: flex; align-items: center; gap: 8px;
+}
+.btn-secondary:hover { background: var(--surface2); border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+.hero-stats {
+  display: flex; gap: 40px; margin-top: 64px; flex-wrap: wrap; justify-content: center;
+  animation: fadeSlideDown 0.8s 0.4s ease both;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-size: 2rem; font-weight: 900; color: var(--text);
+  font-family: 'JetBrains Mono', monospace; letter-spacing: -1px;
+}
+.stat-num span { color: var(--accent); }
+.stat-label { font-size: 0.82rem; color: var(--text3); font-weight: 500; margin-top: 2px; }
+
+/* Floaters */
+.hero-floaters { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.floater {
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--text3);
+  opacity: 0.5;
+  animation: float 8s ease-in-out infinite;
+  background: var(--surface);
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+.floater:nth-child(1) { top: 18%; left: 6%; animation-delay: 0s; }
+.floater:nth-child(2) { top: 28%; right: 7%; animation-delay: 1.5s; }
+.floater:nth-child(3) { top: 62%; left: 4%; animation-delay: 3s; }
+.floater:nth-child(4) { top: 70%; right: 6%; animation-delay: 2s; }
+.floater:nth-child(5) { top: 45%; left: 2%; animation-delay: 4s; }
+.floater:nth-child(6) { top: 55%; right: 3%; animation-delay: 0.5s; }
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* ========== SECTION COMMONS ========== */
+section { padding: 80px 24px; }
+.container { max-width: 1200px; margin: 0 auto; }
+.section-tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.section-sub {
+  font-size: 1rem; color: var(--text2); max-width: 520px;
+  margin-bottom: 48px;
+}
+
+/* ========== CLASSES SECTION ========== */
+#classes { background: var(--bg2); }
+.class-tabs {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px;
+}
+.class-tab {
+  padding: 9px 18px;
+  border-radius: 99px;
+  font-size: 0.85rem; font-weight: 600;
+  background: var(--surface); color: var(--text2);
+  border: 1.5px solid var(--border);
+  transition: var(--transition);
+}
+.class-tab:hover { border-color: var(--accent); color: var(--accent); }
+.class-tab.active {
+  background: var(--accent); color: #fff; border-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(37,99,235,0.35);
+}
+
+.subject-filter {
+  display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap;
+}
+.subj-btn {
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 0.83rem; font-weight: 600;
+  background: var(--surface); color: var(--text3);
+  border: 1.5px solid var(--border);
+  transition: var(--transition);
+  display: flex; align-items: center; gap: 6px;
+}
+.subj-btn:hover { color: var(--accent); border-color: var(--accent); }
+.subj-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.subj-btn.maths.active { background: #2563eb; }
+.subj-btn.physics.active { background: #7c3aed; }
+.subj-btn.chemistry.active { background: #059669; }
+
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.formula-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative; overflow: hidden;
+}
+.formula-card::before {
+  content:'';
+  position: absolute; top:0; left:0; right:0; height:3px;
+  background: var(--card-color, var(--accent));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s;
+}
+.formula-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--card-color, var(--accent)); }
+.formula-card:hover::before { transform: scaleX(1); }
+.card-header {
+  display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; gap: 10px;
+}
+.card-icon {
+  width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  background: var(--icon-bg, rgba(37,99,235,0.1));
+}
+.card-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.badge {
+  padding: 3px 9px; border-radius: 20px;
+  font-size: 0.7rem; font-weight: 700;
+  background: var(--badge-bg, rgba(37,99,235,0.1));
+  color: var(--badge-color, var(--accent));
+}
+.formula-card h3 {
+  font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--text);
+}
+.formula-card p { font-size: 0.83rem; color: var(--text3); line-height: 1.5; margin-bottom: 18px; }
+.formula-preview {
+  background: var(--surface2); border-radius: 10px;
+  padding: 12px 14px; margin-bottom: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem; color: var(--text2); line-height: 1.7;
+}
+.formula-preview .highlight {
+  color: var(--accent); font-weight: 600;
+}
+.card-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.chapters-count { font-size: 0.78rem; color: var(--text3); }
+.download-btn {
+  padding: 7px 16px;
+  border-radius: 8px;
+  background: var(--accent); color: #fff;
+  font-size: 0.8rem; font-weight: 700;
+  display: flex; align-items: center; gap: 6px;
+  transition: var(--transition);
+  box-shadow: 0 3px 10px rgba(37,99,235,0.25);
+}
+.download-btn:hover { background: var(--accent2); transform: translateY(-1px); }
+
+/* Hidden cards */
+.formula-card.hidden { display: none; }
+
+/* ========== QUICK REVISION ========== */
+#quick-revision { background: var(--bg); }
+.revision-tabs {
+  display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap;
+}
+.rev-tab {
+  padding: 8px 18px; border-radius: 8px;
+  font-size: 0.85rem; font-weight: 600;
+  background: var(--surface); border: 1.5px solid var(--border);
+  color: var(--text2); transition: var(--transition);
+}
+.rev-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.rev-tab:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+
+.revision-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px;
+}
+.rev-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px;
+  transition: var(--transition);
+}
+.rev-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+.rev-card-top {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+}
+.rev-num {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; font-weight: 700;
+  flex-shrink: 0;
+}
+.rev-title { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+.rev-formula {
+  background: var(--surface2); border-radius: 10px;
+  padding: 12px 14px; margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem; color: var(--text2);
+}
+.rev-formula strong { color: var(--accent); font-weight: 700; }
+.rev-note { font-size: 0.78rem; color: var(--text3); }
+
+/* ========== JEE SECTION ========== */
+#jee {
+  background: linear-gradient(135deg, #060d1f 0%, #0f1e4a 50%, #060d1f 100%);
+  color: #e8eeff;
+  position: relative; overflow: hidden;
+}
+#jee::before {
+  content:'';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle at 20% 50%, rgba(59,130,246,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(124,58,237,0.10) 0%, transparent 50%);
+}
+.jee-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 18px; border-radius: 99px;
+  border: 1px solid rgba(245,158,11,0.4);
+  background: rgba(245,158,11,0.1);
+  color: #f59e0b; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 14px;
+}
+#jee .section-title { color: #e8eeff; }
+#jee .section-sub { color: #94a3c4; }
+.jee-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;
+}
+.jee-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 22px;
+  transition: var(--transition);
+  position: relative; overflow: hidden;
+}
+.jee-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59,130,246,0.6), transparent);
+}
+.jee-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-4px); border-color: rgba(59,130,246,0.3); }
+.jee-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.jee-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(37,99,235,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  border: 1px solid rgba(37,99,235,0.25);
+}
+.jee-card h3 { font-size: 0.95rem; font-weight: 700; color: #e8eeff; }
+.jee-card .subtag { font-size: 0.75rem; color: #94a3c4; margin-top: 2px; }
+.jee-formulas { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.jee-formula-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: rgba(255,255,255,0.04); border-radius: 8px;
+  padding: 10px 12px;
+}
+.jee-formula-item .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 6px; }
+.jee-formula-item span { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #94a3c4; }
+.jee-formula-item span strong { color: #60a5fa; font-weight: 600; }
+.jee-card-footer { display: flex; justify-content: space-between; align-items: center; }
+.jee-level { font-size: 0.75rem; color: var(--gold); font-weight: 600; }
+.jee-dl {
+  padding: 7px 14px; border-radius: 8px;
+  background: rgba(37,99,235,0.2); border: 1px solid rgba(37,99,235,0.3);
+  color: #60a5fa; font-size: 0.8rem; font-weight: 700;
+  display: flex; align-items: center; gap: 6px;
+  transition: var(--transition);
+}
+.jee-dl:hover { background: var(--accent); color: #fff; }
+
+/* ========== ABOUT ========== */
+#about { background: var(--bg2); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-left { }
+.about-features { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
+.about-feature {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px; border-radius: var(--radius-sm);
+  background: var(--surface); border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.about-feature:hover { border-color: var(--accent); }
+.feat-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(37,99,235,0.1); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 1rem;
+}
+.feat-text h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 3px; }
+.feat-text p { font-size: 0.8rem; color: var(--text3); }
+.about-right {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.stat-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  text-align: center; transition: var(--transition);
+}
+.stat-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+.stat-card .big { font-size: 2.2rem; font-weight: 900; color: var(--accent); font-family: 'JetBrains Mono', monospace; letter-spacing: -1px; }
+.stat-card p { font-size: 0.82rem; color: var(--text3); margin-top: 4px; }
+
+/* ========== CONTACT ========== */
+#contact { background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: start; }
+.contact-info { }
+.contact-info h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
+.contact-info p { font-size: 0.88rem; color: var(--text2); margin-bottom: 28px; }
+.contact-items { display: flex; flex-direction: column; gap: 12px; }
+.contact-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 16px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); transition: var(--transition);
+}
+.contact-item:hover { border-color: var(--accent); }
+.contact-item .ci-icon { font-size: 1.1rem; }
+.contact-item .ci-label { font-size: 0.78rem; color: var(--text3); }
+.contact-item .ci-value { font-size: 0.88rem; font-weight: 600; color: var(--text); }
+
+.contact-form-wrap {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 32px;
+  box-shadow: var(--shadow);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.form-group label { font-size: 0.83rem; font-weight: 600; color: var(--text2); }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif; font-size: 0.9rem;
+  transition: var(--transition); outline: none;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-submit {
+  width: 100%;
+  padding: 13px; border-radius: 12px;
+  background: var(--accent); color: #fff;
+  font-size: 0.95rem; font-weight: 700;
+  transition: var(--transition);
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.form-submit:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,99,235,0.35); }
+
+/* ========== FOOTER ========== */
+footer {
+  background: var(--bg2); border-top: 1px solid var(--border);
+  padding: 48px 24px 24px;
+}
+.footer-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand p { font-size: 0.85rem; color: var(--text3); margin: 12px 0 20px; max-width: 280px; }
+.footer-links h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 14px; color: var(--text); }
+.footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-links ul li a { font-size: 0.83rem; color: var(--text3); transition: var(--transition); }
+.footer-links ul li a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  border-top: 1px solid var(--border); padding-top: 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.footer-bottom p { font-size: 0.8rem; color: var(--text3); }
+.footer-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.footer-tag {
+  padding: 4px 10px; border-radius: 20px;
+  font-size: 0.72rem; font-weight: 600;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text3);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ========== TOAST ========== */
+.toast {
+  position: fixed; bottom: 30px; right: 30px; z-index: 3000;
+  background: var(--text); color: var(--bg);
+  padding: 14px 22px; border-radius: 12px;
+  font-size: 0.88rem; font-weight: 600;
+  display: flex; align-items: center; gap: 10px;
+  transform: translateY(80px); opacity: 0;
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  box-shadow: var(--shadow-lg);
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast-icon { font-size: 1rem; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero h1 { letter-spacing: -1px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .floater:nth-child(1), .floater:nth-child(2),
+  .floater:nth-child(3), .floater:nth-child(4),
+  .floater:nth-child(5), .floater:nth-child(6) { display: none; }
+}
+@media (max-width: 540px) {
+  section { padding: 60px 16px; }
+  .navbar { padding: 0 16px; }
+  .hero { padding: 100px 16px 60px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .about-right { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-brand">
+    <div class="logo-icon">∑</div>
+    Formula<span>Hub</span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#" class="active">Home</a>
+    <a href="#classes">Classes</a>
+    <a href="#quick-revision">Quick Revision</a>
+    <a href="#jee">JEE Special</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="search-btn" onclick="toggleSearch()" title="Search">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    </button>
+    <button class="dark-toggle" onclick="toggleDark()" id="darkBtn" title="Toggle dark mode">🌙</button>
+    <button class="hamburger" onclick="toggleMobileNav()" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#" onclick="closeMobileNav()">Home</a>
+  <a href="#classes" onclick="closeMobileNav()">Classes</a>
+  <a href="#quick-revision" onclick="closeMobileNav()">Quick Revision</a>
+  <a href="#jee" onclick="closeMobileNav()">JEE Special</a>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay" onclick="closeSearchOnOutside(event)">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Search formulas, topics, chapters..." oninput="handleSearch(this.value)">
+      <button onclick="toggleSearch()" style="color:var(--text3);font-size:1.1rem;">✕</button>
+    </div>
+    <div class="search-results" id="searchResults">
+      <div style="padding:16px;text-align:center;color:var(--text3);font-size:0.88rem;">Type to search formulas...</div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-floaters">
+    <div class="floater">E = mc²</div>
+    <div class="floater">a² + b² = c²</div>
+    <div class="floater">PV = nRT</div>
+    <div class="floater">F = ma</div>
+    <div class="floater">sin²θ + cos²θ = 1</div>
+    <div class="floater">∫ e^x dx = e^x + C</div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span>CBSE Class 6–12 · Free · Updated 2024</div>
+    <h1>All Class Formula Sheets<br><span class="line2">in One Place</span></h1>
+    <p>Comprehensive, chapter-wise formula sheets for Maths, Physics & Chemistry. Study smarter, not harder.</p>
+    <div class="hero-cta">
+      <a href="#classes" class="btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21.02l1.18-6.88L2 9.27l6.91-1.01L12 2z"/></svg>
+        Explore Formulas
+      </a>
+      <a href="#jee" class="btn-secondary">
+        🎯 JEE Special Section
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">7<span>+</span></div>
+        <div class="stat-label">Classes Covered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">500<span>+</span></div>
+        <div class="stat-label">Formulas Listed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3<span>+</span></div>
+        <div class="stat-label">Subjects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Free Forever</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSES SECTION -->
+<section id="classes">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        CLASS-WISE FORMULA SHEETS
+      </div>
+      <h2 class="section-title">Pick Your Class</h2>
+      <p class="section-sub">Select your class and filter by subject to access instant formula sheets with PDF downloads.</p>
+    </div>
+
+    <!-- Class Tabs -->
+    <div class="class-tabs reveal" id="classTabs">
+      <button class="class-tab active" onclick="setClass(this,'6')">Class 6</button>
+      <button class="class-tab" onclick="setClass(this,'7')">Class 7</button>
+      <button class="class-tab" onclick="setClass(this,'8')">Class 8</button>
+      <button class="class-tab" onclick="setClass(this,'9')">Class 9</button>
+      <button class="class-tab" onclick="setClass(this,'10')">Class 10</button>
+      <button class="class-tab" onclick="setClass(this,'11')">Class 11</button>
+      <button class="class-tab" onclick="setClass(this,'12')">Class 12</button>
+    </div>
+
+    <!-- Subject Filter -->
+    <div class="subject-filter reveal" id="subjectFilter">
+      <button class="subj-btn active" onclick="setSubject(this,'all')">📚 All Subjects</button>
+      <button class="subj-btn maths" onclick="setSubject(this,'maths')">➗ Maths</button>
+      <button class="subj-btn physics" onclick="setSubject(this,'physics')">⚡ Physics</button>
+      <button class="subj-btn chemistry" onclick="setSubject(this,'chemistry')">🧪 Chemistry</button>
+    </div>
+
+    <!-- Formula Grid -->
+    <div class="formula-grid reveal" id="formulaGrid"></div>
+  </div>
+</section>
+
+<!-- QUICK REVISION -->
+<section id="quick-revision">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        QUICK REVISION
+      </div>
+      <h2 class="section-title">Most Important Formulas</h2>
+      <p class="section-sub">The top formulas you absolutely must know before your exam. Curated by subject experts.</p>
+    </div>
+
+    <div class="revision-tabs reveal" id="revTabs">
+      <button class="rev-tab active" onclick="setRevTab(this,'maths')">➗ Maths</button>
+      <button class="rev-tab" onclick="setRevTab(this,'physics')">⚡ Physics</button>
+      <button class="rev-tab" onclick="setRevTab(this,'chemistry')">🧪 Chemistry</button>
+    </div>
+
+    <div class="revision-grid reveal" id="revGrid"></div>
+  </div>
+</section>
+
+<!-- JEE SPECIAL -->
+<section id="jee">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="reveal">
+      <div class="jee-badge">🎯 JEE SPECIAL</div>
+      <h2 class="section-title" style="color:#e8eeff">JEE Advanced & Mains<br>Formula Bank</h2>
+      <p class="section-sub">Hand-picked high-yield formulas for JEE preparation. Covers all three subjects at JEE difficulty level.</p>
+    </div>
+    <div class="jee-grid reveal" id="jeeGrid"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <div class="section-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          ABOUT FORMULAHUB
+        </div>
+        <h2 class="section-title">Built for Students,<br>by Students</h2>
+        <p style="color:var(--text2);margin-bottom:24px;font-size:0.95rem;">FormulaHub is a free educational platform designed to give every CBSE student instant access to well-organized, chapter-wise formula sheets — from Class 6 all the way to Class 12.</p>
+        <p style="color:var(--text3);font-size:0.88rem;margin-bottom:0">Our mission is simple: reduce exam stress by making important formulas easy to find, easy to read, and easy to download.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="feat-icon">📖</div>
+            <div class="feat-text">
+              <h4>Chapter-Wise Organization</h4>
+              <p>Every formula is sorted by chapter for easy navigation before exams.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feat-icon">📥</div>
+            <div class="feat-text">
+              <h4>PDF Downloads</h4>
+              <p>Download any formula sheet as a clean PDF to study offline anytime.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feat-icon">🔍</div>
+            <div class="feat-text">
+              <h4>Instant Search</h4>
+              <p>Find any formula in seconds using our powerful in-site search engine.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feat-icon">🆓</div>
+            <div class="feat-text">
+              <h4>100% Free, Always</h4>
+              <p>No subscription, no paywalls. Every formula sheet is completely free.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <div class="stat-card">
+          <div class="big">7</div>
+          <p>Classes Covered<br>(Class 6 to 12)</p>
+        </div>
+        <div class="stat-card">
+          <div class="big">500+</div>
+          <p>Total Formulas<br>Across All Subjects</p>
+        </div>
+        <div class="stat-card">
+          <div class="big">3</div>
+          <p>Core Subjects:<br>Maths, Physics, Chem</p>
+        </div>
+        <div class="stat-card">
+          <div class="big">12K+</div>
+          <p>Downloads Per<br>Month</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:48px">
+      <div class="section-tag">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        CONTACT US
+      </div>
+      <h2 class="section-title">We'd Love to Hear From You</h2>
+      <p class="section-sub">Have a formula request, found an error, or want to contribute? Reach out anytime.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p>We typically respond within 24 hours on weekdays. Your feedback helps us improve FormulaHub for every student.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <span class="ci-icon">📧</span>
+            <div>
+              <div class="ci-label">Email Us</div>
+              <div class="ci-value">hello@formulahub.in</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">💬</span>
+            <div>
+              <div class="ci-label">Telegram Community</div>
+              <div class="ci-value">@FormulaHubCBSE</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">🐦</span>
+            <div>
+              <div class="ci-label">Twitter / X</div>
+              <div class="ci-value">@FormulaHub</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">🏫</span>
+            <div>
+              <div class="ci-label">Partnership</div>
+              <div class="ci-value">partner@formulahub.in</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:24px;">Send a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Ravi Sharma">
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="ravi@email.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Topic</label>
+          <select>
+            <option>Formula Request</option>
+            <option>Report an Error</option>
+            <option>Contribute Formulas</option>
+            <option>Partnership / Schools</option>
+            <option>General Feedback</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Describe your request or feedback..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-brand" style="margin-bottom:0">
+        <div class="logo-icon">∑</div>
+        Formula<span style="color:var(--accent)">Hub</span>
+      </div>
+      <p>Your go-to resource for CBSE Class 6–12 formula sheets. Free, organized, and always updated.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <span class="footer-tag">CBSE 2024</span>
+        <span class="footer-tag">Free PDFs</span>
+        <span class="footer-tag">JEE Ready</span>
+        <span class="footer-tag">Class 6–12</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Classes</h4>
+      <ul>
+        <li><a href="#classes">Class 6 & 7</a></li>
+        <li><a href="#classes">Class 8 & 9</a></li>
+        <li><a href="#classes">Class 10</a></li>
+        <li><a href="#classes">Class 11 & 12</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Subjects</h4>
+      <ul>
+        <li><a href="#classes">Mathematics</a></li>
+        <li><a href="#classes">Physics</a></li>
+        <li><a href="#classes">Chemistry</a></li>
+        <li><a href="#jee">JEE Formulas</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#quick-revision">Quick Revision</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 FormulaHub. Made with ❤️ for students across India.</p>
+    <p style="color:var(--text3)">All formulas are based on CBSE syllabus.</p>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✅</span>
+  <span id="toastMsg">Download started!</span>
+</div>
+
+<script>
+// ========== DATA ==========
+const formulaData = {
+  6:  {
+    maths:     { title:'Number System & Fractions', chapters:'Natural Numbers, Fractions, Decimals, Factors', formulas:['Fraction = Numerator/Denominator','Percentage = (Part/Whole) × 100','Area of Rectangle = l × b','Perimeter = 2(l + b)'], color:'#2563eb', icon:'➗', iconBg:'rgba(37,99,235,0.1)' },
+    science:   { title:'Basic Science Formulas', chapters:'Motion, Materials, Living World', formulas:['Speed = Distance / Time','Density = Mass / Volume'], color:'#7c3aed', icon:'🔬', iconBg:'rgba(124,58,237,0.1)' }
+  },
+  7: {
+    maths:    { title:'Algebra & Geometry', chapters:'Integers, Fractions, Lines & Angles, Triangles', formulas:['Sum of angles in triangle = 180°','Area of Triangle = ½ × base × height','(a+b)² = a² + 2ab + b²'], color:'#2563eb', icon:'➗', iconBg:'rgba(37,99,235,0.1)' },
+    science:  { title:'Heat, Motion & Matter', chapters:'Heat, Light, Acids & Bases, Motion', formulas:['Speed = Distance / Time','Work = Force × Displacement'], color:'#059669', icon:'🔬', iconBg:'rgba(5,150,105,0.1)' }
+  },
+  8: {
+    maths:    { title:'Squares, Cubes & Mensuration', chapters:'Rational Numbers, Powers, Mensuration, Graphs', formulas:['Volume of Cube = a³','Volume of Cuboid = l × b × h','(a-b)² = a² - 2ab + b²','Area of circle = πr²'], color:'#2563eb', icon:'➗', iconBg:'rgba(37,99,235,0.1)' },
+    science:  { title:'Force, Friction & Sound', chapters:'Crop Production, Friction, Sound, Light, Stars', formulas:['Pressure = Force / Area','Speed of sound in air ≈ 343 m/s'], color:'#7c3aed', icon:'⚡', iconBg:'rgba(124,58,237,0.1)' }
+  },
+  9: {
+    maths:    { title:'Coordinate Geometry & Algebra', chapters:'Number Systems, Polynomials, Coordinate Geometry, Triangles', formulas:['Distance formula = √[(x₂-x₁)² + (y₂-y₁)²]','Section formula = ((m₁x₂+m₂x₁)/(m₁+m₂))','Area of Triangle = ½|x₁(y₂-y₃)+x₂(y₃-y₁)+x₃(y₁-y₂)|'], color:'#2563eb', icon:'➗', iconBg:'rgba(37,99,235,0.1)' },
+    physics:  { title:'Motion & Force Formulas', chapters:'Motion, Force, Gravitation, Sound, Work & Energy', formulas:['v = u + at','s = ut + ½at²','v² = u² + 2as','F = ma'], color:'#7c3aed', icon:'⚡', iconBg:'rgba(124,58,237,0.1)' },
+    chemistry:{ title:'Atoms, Molecules & Matter', chapters:'Matter, Atoms & Molecules, Structure of Atom', formulas:['Avogadro Number = 6.022×10²³','Molar Mass = mass/moles','Density = mass/volume'], color:'#059669', icon:'🧪', iconBg:'rgba(5,150,105,0.1)' }
+  },
+  10: {
+    maths:    { title:'Class 10 Maths Complete', chapters:'Real Numbers, Polynomials, Quadratics, AP, Trig, Circles, Surface Area', formulas:['Quadratic: x = (-b ± √(b²-4ac)) / 2a','Sum of AP: Sₙ = n/2 [2a + (n-1)d]','nᵗʰ term: aₙ = a + (n-1)d'], color:'#2563eb', icon:'➗', iconBg:'rgba(37,99,235,0.1)' },
+    physics:  { title:'Electricity & Light', chapters:'Electricity, Magnetic Effects, Light', formulas:['Ohm\'s Law: V = IR','Power: P = VI = I²R = V²/R','Resistors in series: R = R₁+R₂+R₃'], color:'#7c3aed', icon:'⚡', iconBg:'rgba(124,58,237,0.1)' },
+    chemistry:{ title:'Chemical Reactions & Acids', chapters:'Chemical Reactions, Acids & Bases, Metals, Carbon Compounds', formulas:['pH = -log[H⁺]','Ka × Kb = Kw = 10⁻¹⁴','Mole = mass / molar mass'], color:'#059669', icon:'🧪', iconBg:'rgba(5,150,105,0.1)' }
+  },
+  11: {
+    maths:    { title:'Class 11 Maths – Full Sheet', chapters:'Sets, Relations, Trig, Complex Numbers, Sequences, Permutations, Binomial, Limits', formulas:['sin²A + cos²A = 1','ⁿCᵣ = n! / (r!(n-r)!)','lim(x→0) sinx/x = 1'], color:'#2563eb', icon:'➗', iconBg:'rgba(37,99,235,0.1)' },
+    physics:  { title:'Mechanics & Thermodynamics', chapters:'Units, Kinematics, Laws of Motion, Work-Energy, Rotational, Gravitation, Thermodynamics', formulas:['KE = ½mv²','PE = mgh','W = F·d·cosθ','PV = nRT'], color:'#7c3aed', icon:'⚡', iconBg:'rgba(124,58,237,0.1)' },
+    chemistry:{ title:'Physical & Organic Chemistry', chapters:'Atomic Structure, Chemical Bonding, Equilibrium, Redox, Hydrocarbons', formulas:['Energy = hν','λ = h/mv (de Broglie)','ΔG = ΔH - TΔS','Kc = [products]/[reactants]'], color:'#059669', icon:'🧪', iconBg:'rgba(5,150,105,0.1)' }
+  },
+  12: {
+    maths:    { title:'Class 12 Maths – Complete', chapters:'Relations & Functions, Inverse Trig, Matrices, Determinants, Calculus, Vectors, 3D, LPP, Probability', formulas:['d/dx(uv) = u\'v + uv\'','∫eˣ[f(x)+f\'(x)]dx = eˣf(x)+C','|A| = a(ei-fh)-b(di-fg)+c(dh-eg)'], color:'#2563eb', icon:'➗', iconBg:'rgba(37,99,235,0.1)' },
+    physics:  { title:'Electrostatics & Modern Physics', chapters:'Electrostatics, Current, Magnetism, EM Waves, Optics, Dual Nature, Atoms, Nuclei', formulas:['F = kq₁q₂/r²','E = V/d','1/f = 1/v - 1/u','λ = 12400/E (eV)'], color:'#7c3aed', icon:'⚡', iconBg:'rgba(124,58,237,0.1)' },
+    chemistry:{ title:'Physical & Inorganic Chemistry', chapters:'Solutions, Electrochemistry, Kinetics, Surface, p,d,f blocks, Coordination, Polymers', formulas:['Nernst: E = E° - (RT/nF)lnQ','Rate = k[A]ᵐ[B]ⁿ','t½ = 0.693/k (first order)'], color:'#059669', icon:'🧪', iconBg:'rgba(5,150,105,0.1)' }
+  }
+};
+
+const revisionData = {
+  maths: [
+    { num:'01', title:'Quadratic Formula', formula:'<strong>x = (-b ± √(b²-4ac)) / 2a</strong>', note:'Discriminant D = b²-4ac. If D>0: 2 real roots, D=0: equal roots, D<0: no real roots.' },
+    { num:'02', title:'AP Sum Formula', formula:'Sₙ = <strong>n/2 [2a + (n-1)d]</strong>', note:'a = first term, d = common difference, n = number of terms.' },
+    { num:'03', title:'Distance Formula', formula:'d = <strong>√[(x₂-x₁)² + (y₂-y₁)²]</strong>', note:'Distance between two points in a coordinate plane.' },
+    { num:'04', title:'Pythagorean Theorem', formula:'<strong>a² + b² = c²</strong>', note:'Where c is hypotenuse of a right-angled triangle.' },
+    { num:'05', title:'Area of Triangle (Heron\'s)', formula:'A = <strong>√[s(s-a)(s-b)(s-c)]</strong>', note:'s = (a+b+c)/2 is the semi-perimeter.' },
+    { num:'06', title:'Trigonometry Identity', formula:'<strong>sin²θ + cos²θ = 1</strong>', note:'Also: 1+tan²θ = sec²θ, 1+cot²θ = cosec²θ.' },
+    { num:'07', title:'Derivative Product Rule', formula:'<strong>d/dx(uv) = u\'v + uv\'</strong>', note:'For quotient: d/dx(u/v) = (u\'v - uv\')/v².' },
+    { num:'08', title:'Permutations & Combinations', formula:'ⁿPᵣ = <strong>n!/(n-r)!</strong>  &  ⁿCᵣ = <strong>n!/r!(n-r)!</strong>', note:'Order matters in permutations, not in combinations.' }
+  ],
+  physics: [
+    { num:'01', title:'Newton\'s Second Law', formula:'<strong>F = ma</strong>', note:'Force equals mass times acceleration. SI unit: Newton (N).' },
+    { num:'02', title:'Equations of Motion', formula:'<strong>v = u+at, s = ut+½at², v² = u²+2as</strong>', note:'u = initial velocity, v = final velocity, a = acceleration, t = time.' },
+    { num:'03', title:'Law of Gravitation', formula:'F = <strong>Gm₁m₂/r²</strong>', note:'G = 6.67×10⁻¹¹ N·m²/kg². Force is always attractive.' },
+    { num:'04', title:'Ohm\'s Law', formula:'<strong>V = IR</strong>', note:'Voltage = Current × Resistance. Valid for linear conductors.' },
+    { num:'05', title:'Kinetic Energy', formula:'<strong>KE = ½mv²</strong>', note:'Work-Energy theorem: Work done = Change in KE.' },
+    { num:'06', title:'Coulomb\'s Law', formula:'F = <strong>kq₁q₂/r²</strong>', note:'k = 9×10⁹ N·m²/C². Can be attractive or repulsive.' },
+    { num:'07', title:'Ideal Gas Law', formula:'<strong>PV = nRT</strong>', note:'R = 8.314 J/mol·K. For real gases: use Van der Waals equation.' },
+    { num:'08', title:'Mirror / Lens Formula', formula:'<strong>1/f = 1/v + 1/u</strong>', note:'Sign convention: distances measured from pole/optical centre.' }
+  ],
+  chemistry: [
+    { num:'01', title:'Mole Concept', formula:'Moles = <strong>given mass / molar mass</strong>', note:'1 mole = 6.022×10²³ particles (Avogadro\'s number).' },
+    { num:'02', title:'pH Formula', formula:'<strong>pH = -log[H⁺]</strong>', note:'At 25°C: neutral pH = 7, acid < 7, base > 7.' },
+    { num:'03', title:'de Broglie Wavelength', formula:'<strong>λ = h / mv</strong>', note:'h = 6.626×10⁻³⁴ J·s (Planck\'s constant). Shows wave-particle duality.' },
+    { num:'04', title:'Gibbs Free Energy', formula:'<strong>ΔG = ΔH - TΔS</strong>', note:'If ΔG < 0: spontaneous. If ΔG > 0: non-spontaneous.' },
+    { num:'05', title:'First Order Half Life', formula:'<strong>t½ = 0.693 / k</strong>', note:'Independent of initial concentration for first-order reactions.' },
+    { num:'06', title:'Nernst Equation', formula:'E = E° - <strong>(RT/nF) ln Q</strong>', note:'At 25°C: E = E° - (0.0592/n) log Q.' },
+    { num:'07', title:'Molarity', formula:'M = <strong>moles of solute / litres of solution</strong>', note:'Different from molality (moles/kg of solvent).' },
+    { num:'08', title:'Raoult\'s Law', formula:'Pₐ = <strong>Xₐ × P°ₐ</strong>', note:'Partial pressure = mole fraction × vapour pressure of pure component.' }
+  ]
+};
+
+const jeeData = [
+  { icon:'⚡', title:'Electrostatics', sub:'Physics – JEE Level', level:'★★★★ High Yield', color:'#3b82f6', formulas:['Electric field: <strong>E = kq/r²</strong>', 'Potential: <strong>V = kq/r</strong>', 'Capacitance: <strong>C = Q/V</strong>', 'Energy stored: <strong>U = ½CV²</strong>'] },
+  { icon:'🔄', title:'Rotational Mechanics', sub:'Physics – JEE Level', level:'★★★★ High Yield', color:'#8b5cf6', formulas:['Torque: <strong>τ = Iα = r×F</strong>', 'MOI of disk: <strong>I = ½MR²</strong>', 'Angular momentum: <strong>L = Iω</strong>', 'Rolling: <strong>KE = ½Iω² + ½mv²</strong>'] },
+  { icon:'➗', title:'Integral Calculus', sub:'Maths – JEE Level', level:'★★★★★ Critical', color:'#2563eb', formulas:['∫xⁿ dx = <strong>xⁿ⁺¹/(n+1) + C</strong>', '∫eˣdx = <strong>eˣ + C</strong>', '∫sin x dx = <strong>-cos x + C</strong>', 'By parts: <strong>∫uv = u∫v - ∫(u\'∫v)</strong>'] },
+  { icon:'🧪', title:'Electrochemistry', sub:'Chemistry – JEE Level', level:'★★★★ High Yield', color:'#059669', formulas:['Nernst: <strong>E = E° – (0.0592/n)logQ</strong>', 'ΔG = <strong>-nFE</strong>', 'Faraday: <strong>m = (Mlt)/(nF)</strong>', 'Kc from E°: <strong>logK = nE°/0.0592</strong>'] },
+  { icon:'📐', title:'Coordinate Geometry', sub:'Maths – JEE Level', level:'★★★★★ Critical', color:'#f59e0b', formulas:['Circle: <strong>(x-h)²+(y-k)² = r²</strong>', 'Parabola: <strong>y² = 4ax</strong>', 'Ellipse: <strong>x²/a² + y²/b² = 1</strong>', 'Tangent to y²=4ax: <strong>ty = x + at²</strong>'] },
+  { icon:'⚛️', title:'Atomic Structure', sub:'Chemistry – JEE Level', level:'★★★ Important', color:'#ef4444', formulas:['Energy: <strong>Eₙ = -13.6/n² eV</strong>', 'Radius: <strong>rₙ = 0.529n²/Z Å</strong>', 'de Broglie: <strong>λ = h/mv</strong>', 'Heisenberg: <strong>Δx·Δp ≥ h/4π</strong>'] }
+];
+
+const searchIndex = [
+  { badge:'Class 10', title:'Quadratic Formula', sub:'Maths · Polynomials' },
+  { badge:'Class 12', title:'Integration by Parts', sub:'Maths · Calculus' },
+  { badge:'Class 9', title:'Newton\'s Laws of Motion', sub:'Physics · Force' },
+  { badge:'Class 12', title:'Nernst Equation', sub:'Chemistry · Electrochemistry' },
+  { badge:'JEE', title:'Rotational Motion', sub:'Physics · Mechanics' },
+  { badge:'Class 10', title:'Ohm\'s Law & Circuits', sub:'Physics · Electricity' },
+  { badge:'Class 11', title:'Laws of Thermodynamics', sub:'Physics · Thermodynamics' },
+  { badge:'Class 11', title:'Hess\'s Law', sub:'Chemistry · Thermochemistry' },
+  { badge:'Class 10', title:'Trigonometric Ratios', sub:'Maths · Trigonometry' },
+  { badge:'Class 12', title:'Gaussian Law', sub:'Physics · Electrostatics' },
+];
+
+// ========== STATE ==========
+let currentClass = '6';
+let currentSubject = 'all';
+let isDark = false;
+let mobileNavOpen = false;
+
+// ========== INIT ==========
+function init() {
+  renderFormulas();
+  renderRevision('maths');
+  renderJEE();
+  initReveal();
+}
+
+// ========== RENDER FORMULAS ==========
+function renderFormulas() {
+  const grid = document.getElementById('formulaGrid');
+  const classData = formulaData[parseInt(currentClass)] || {};
+  grid.innerHTML = '';
+  const entries = Object.entries(classData);
+  if (entries.length === 0) {
+    grid.innerHTML = '<div style="color:var(--text3);font-size:0.9rem;padding:20px">No formulas listed yet for this class. Coming soon!</div>';
+    return;
+  }
+  entries.forEach(([subj, d]) => {
+    if (currentSubject !== 'all' && subj !== currentSubject) return;
+    const card = document.createElement('div');
+    card.className = 'formula-card';
+    card.style.setProperty('--card-color', d.color);
+    card.innerHTML = `
+      <div class="card-header">
+        <div class="card-icon" style="background:${d.iconBg}">${d.icon}</div>
+        <div class="card-badges">
+          <span class="badge">Class ${currentClass}</span>
+          <span class="badge" style="background:${d.iconBg};color:${d.color}">${subj.charAt(0).toUpperCase()+subj.slice(1)}</span>
+        </div>
+      </div>
+      <h3>${d.title}</h3>
+      <p>${d.chapters}</p>
+      <div class="formula-preview">${d.formulas.map((f,i)=>`<div${i<2?' class="highlight"':''}>• ${f}</div>`).join('')}</div>
+      <div class="card-footer">
+        <span class="chapters-count">📚 ${d.chapters.split(',').length} chapters</span>
+        <button class="download-btn" onclick="handleDownload('Class ${currentClass} ${subj} Formula Sheet')">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </button>
+      </div>`;
+    grid.appendChild(card);
+  });
+  if (grid.innerHTML === '') {
+    grid.innerHTML = '<div style="color:var(--text3);font-size:0.9rem;padding:20px">No formulas found for this subject and class. Try another filter.</div>';
+  }
+}
+
+function setClass(btn, cls) {
+  document.querySelectorAll('.class-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  currentClass = cls;
+  renderFormulas();
+}
+
+function setSubject(btn, subj) {
+  document.querySelectorAll('.subj-btn').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  currentSubject = subj;
+  renderFormulas();
+}
+
+// ========== RENDER REVISION ==========
+function renderRevision(subj) {
+  const grid = document.getElementById('revGrid');
+  const items = revisionData[subj] || [];
+  grid.innerHTML = items.map(item=>`
+    <div class="rev-card">
+      <div class="rev-card-top">
+        <div class="rev-num">${item.num}</div>
+        <div class="rev-title">${item.title}</div>
+      </div>
+      <div class="rev-formula">${item.formula}</div>
+      <div class="rev-note">💡 ${item.note}</div>
+    </div>
+  `).join('');
+}
+
+function setRevTab(btn, subj) {
+  document.querySelectorAll('.rev-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  renderRevision(subj);
+}
+
+// ========== RENDER JEE ==========
+function renderJEE() {
+  const grid = document.getElementById('jeeGrid');
+  grid.innerHTML = jeeData.map(d=>`
+    <div class="jee-card">
+      <div class="jee-card-header">
+        <div class="jee-icon" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1)">${d.icon}</div>
+        <div>
+          <h3>${d.title}</h3>
+          <div class="subtag">${d.sub}</div>
+        </div>
+      </div>
+      <div class="jee-formulas">
+        ${d.formulas.map(f=>`<div class="jee-formula-item"><div class="dot"></div><span>${f}</span></div>`).join('')}
+      </div>
+      <div class="jee-card-footer">
+        <span class="jee-level">${d.level}</span>
+        <button class="jee-dl" onclick="handleDownload('JEE ${d.title} Formula Sheet')">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PDF
+        </button>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ========== DOWNLOAD ==========
+function handleDownload(name) {
+  showToast(`📥 "${name}" download started!`);
+}
+
+// ========== TOAST ==========
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'), 3000);
+}
+
+// ========== DARK MODE ==========
+function toggleDark() {
+  isDark = !isDark;
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : '');
+  document.getElementById('darkBtn').textContent = isDark ? '☀️' : '🌙';
+}
+
+// ========== SEARCH ==========
+function toggleSearch() {
+  const ov = document.getElementById('searchOverlay');
+  ov.classList.toggle('active');
+  if (ov.classList.contains('active')) {
+    setTimeout(()=>document.getElementById('searchInput').focus(), 100);
+  }
+}
+
+function closeSearchOnOutside(e) {
+  if (e.target === document.getElementById('searchOverlay')) toggleSearch();
+}
+
+function handleSearch(q) {
+  const res = document.getElementById('searchResults');
+  if (!q.trim()) {
+    res.innerHTML = '<div style="padding:16px;text-align:center;color:var(--text3);font-size:0.88rem;">Type to search formulas...</div>';
+    return;
+  }
+  const filtered = searchIndex.filter(i=>
+    i.title.toLowerCase().includes(q.toLowerCase()) ||
+    i.sub.toLowerCase().includes(q.toLowerCase()) ||
+    i.badge.toLowerCase().includes(q.toLowerCase())
+  );
+  if (filtered.length === 0) {
+    res.innerHTML = '<div style="padding:16px;text-align:center;color:var(--text3);font-size:0.88rem;">No results found. Try a different keyword.</div>';
+    return;
+  }
+  res.innerHTML = filtered.map(i=>`
+    <div class="search-result-item" onclick="toggleSearch()">
+      <span class="result-badge">${i.badge}</span>
+      <div>
+        <div class="result-title">${i.title}</div>
+        <div class="result-sub">${i.sub}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// Close search on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const ov = document.getElementById('searchOverlay');
+    if (ov.classList.contains('active')) toggleSearch();
+  }
+});
+
+// ========== MOBILE NAV ==========
+function toggleMobileNav() {
+  mobileNavOpen = !mobileNavOpen;
+  const nav = document.getElementById('mobileNav');
+  nav.classList.toggle('open', mobileNavOpen);
+}
+
+function closeMobileNav() {
+  mobileNavOpen = false;
+  document.getElementById('mobileNav').classList.remove('open');
+}
+
+// ========== CONTACT FORM ==========
+function submitForm() {
+  showToast('✅ Message sent! We\'ll reply within 24 hours.');
+}
+
+// ========== SCROLL REVEAL ==========
+function initReveal() {
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}
+
+// ========== START ==========
+init();
+</script>
+</body>
+</html>
